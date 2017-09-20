@@ -1,0 +1,12 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{childValue}}!
+  </h1>
+  <p>
+    Parent Component : <input  [value]="counterInpParent" #ctrInp />
+    <button (click)="setChildValue(ctrInp.value)">set counter</button>
+  </p>
+
+</div>
+<app-counter [counterInp]="counterInpParent" (updatechild)="UpdatefromChildValue($event)"></app-counter>
